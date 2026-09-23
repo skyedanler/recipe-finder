@@ -4,21 +4,22 @@
 }
 
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 } 
 header {
-    background-color: var(--secondary-color);
-    color: ivory;
-    font-weight: bold;
-    width: 100vw;
-    text-align: center;
-    font-size: 2rem;
-    padding: 8px 0;
+  background-color: var(--secondary-color);
+  color: ivory;
+  font-weight: bold;
+  width: 100vw;
+  text-align: center;
+  font-size: 2rem;
+  padding: 8px 0;
 }
 
 /*search section*/
@@ -62,4 +63,82 @@ header {
 }
 .hidden {
     display: none;
+}
+
+
+/*recipe cards*/
+#recipe-results {
+  width: 80%;
+}
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.recipe-card {
+  min-width: 25%;
+  max-width: 30%;
+  margin: 8px;
+  display: grid;
+  grid-template-areas:
+  ". title title title ."
+  "img img img img img"
+  "time . . servings servings";
+  grid-template-columns: repeat(5, 1fr);
+  background-color: ivory;
+  border-radius: 4px;
+  box-shadow:
+    inset 0px 4px 10px gray,
+    inset 0px -2px 15px gray,
+    0px 4px 10px gray;
+  padding: 8px;
+}
+.recipe-title {
+  grid-area: title;
+}
+.recipe-img {
+  grid-area: img;
+  max-width: 100%;
+  height: auto;
+}
+.recipe-time {
+  grid-area: time;
+}
+.recipe-servings {
+  grid-area: servings;
+}
+
+/*favorites*/
+
+/*modal popup*/
+#modal-popup {
+  border-radius: 8px;
+  position: absolute;
+  width: 500px;
+  background-color: ivory;
+  display: grid;
+  grid-template-areas:
+  "fave title title title close"
+  ". img img img ."
+  ". prep-time cook-time total-time ."
+  "ingredients . . instructions instructions";
+  grid-columns: repeat(5, 1fr);
+}
+.favorite-btn, .close-btn {
+  background: none;
+  border: none;
+}
+.favorite-btn {
+  grid-area: fave;
+}
+.prep-time {
+  grid-area: prep-time;
+}
+.cook-time {
+  grid-area: cook-time;
+}
+.total-time {
+  grid-area: total-time;
+}
+.ingredients {
+  grid-area: ingredients;
 }

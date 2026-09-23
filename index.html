@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="description" content="recipe finder" />
     <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
     <title>Foodie Fest</title>
@@ -25,24 +29,23 @@
           <div class="search-btn">Search</div>
         </div>
         <div class="cuisine-choices search-option hidden" data-search="cuisine">
-          <div class="cuisine-option">Italian</div>
-          <div class="cuisine-option">Mexican</div>
-          <div class="cuisine-option">Chinese</div>
-          <div class="cuisine-option">Southern Comfort</div>
-          <div class="cuisine-option">Indian</div>
+          <div class="cuisine-option" data-search="italian">Italian</div>
+          <div class="cuisine-option" data-search="mexican">Mexican</div>
+          <div class="cuisine-option" data-search="chinese">Chinese</div>
+          <div class="cuisine-option" data-search="southern">Southern Comfort</div>
+          <div class="cuisine-option" data-search="indian">Indian</div>
         </div>
         <div class="dietary-choices search-option hidden" data-search="dietary">
-          <div class="dietary-option">Vegan</div>
-          <div class="dietary-option">Vegatarian</div>
-          <div class="dietary-option">Gluten-Free</div>
-          <div class="dietary-option">Lactose Intolerant</div>
-          <div class="dietary-option">Nut Allergy</div>
+          <div class="dietary-option" data-search="vegan">Vegan</div>
+          <div class="dietary-option" data-search="vegatarian">Vegatarian</div>
+          <div class="dietary-option" data-search="gluten-free">Gluten-Free</div>
+          <div class="dietary-option" data-search="pescatarian">Pescatarian</div>
         </div>
       </div>
     </section>
 
     <section id="recipe-results"></section>
     <section id="favorites"></section>
-    <div id="modal-popup"></div>
+    <div id="modal-popup" class="hidden"></div>
   </body>
 </html>

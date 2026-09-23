@@ -1,0 +1,193 @@
+{
+  "results": [
+    {
+      "id": 1001,
+      "title": "Creamy Tomato Chicken Pasta",
+      "image": "https://placehold.co/600x400?text=Chicken+Pasta",
+      "readyInMinutes": 40,
+      "preparationMinutes": 15,
+      "cookingMinutes": 25,
+      "servings": 4,
+      "extendedIngredients": [
+        { "name": "chicken breast" },
+        { "name": "penne pasta" },
+        { "name": "tomatoes" },
+        { "name": "heavy cream" },
+        { "name": "garlic" },
+        { "name": "parmesan cheese" },
+        { "name": "fresh basil" }
+      ],
+      "instructions": "Cook the pasta according to the package directions. Cook the chicken in a skillet until browned and cooked through. Add garlic and tomatoes and simmer until softened. Stir in the cream and parmesan. Add the pasta and chicken and toss until coated. Garnish with fresh basil."
+    },
+    {
+      "id": 1002,
+      "title": "Garlic Butter Shrimp",
+      "image": "https://placehold.co/600x400?text=Garlic+Shrimp",
+      "readyInMinutes": 20,
+      "preparationMinutes": 10,
+      "cookingMinutes": 10,
+      "servings": 4,
+      "extendedIngredients": [
+        { "name": "shrimp" },
+        { "name": "butter" },
+        { "name": "garlic" },
+        { "name": "lemon" },
+        { "name": "fresh parsley" },
+        { "name": "salt" },
+        { "name": "black pepper" }
+      ],
+      "instructions": "Melt the butter in a large skillet. Add the garlic and cook briefly until fragrant. Add the shrimp and cook until pink and opaque. Finish with lemon juice, parsley, salt, and pepper."
+    },
+    {
+      "id": 1003,
+      "title": "Roasted Vegetable Pasta",
+      "image": "https://placehold.co/600x400?text=Vegetable+Pasta",
+      "readyInMinutes": 45,
+      "preparationMinutes": 15,
+      "cookingMinutes": 30,
+      "servings": 6,
+      "extendedIngredients": [
+        { "name": "rigatoni" },
+        { "name": "zucchini" },
+        { "name": "bell pepper" },
+        { "name": "cherry tomatoes" },
+        { "name": "red onion" },
+        { "name": "olive oil" },
+        { "name": "parmesan cheese" }
+      ],
+      "instructions": "Roast the vegetables with olive oil until tender and lightly browned. Cook the pasta until al dente. Toss the pasta with the roasted vegetables and parmesan cheese."
+    },
+    {
+      "id": 1004,
+      "title": "Crispy Chicken Tacos",
+      "image": "https://placehold.co/600x400?text=Chicken+Tacos",
+      "readyInMinutes": 35,
+      "preparationMinutes": 15,
+      "cookingMinutes": 20,
+      "servings": 4,
+      "extendedIngredients": [
+        { "name": "chicken thighs" },
+        { "name": "corn tortillas" },
+        { "name": "shredded lettuce" },
+        { "name": "tomatoes" },
+        { "name": "cheddar cheese" },
+        { "name": "lime" },
+        { "name": "taco seasoning" }
+      ],
+      "instructions": "Season and cook the chicken until browned and cooked through. Slice the chicken into small pieces. Warm the tortillas and fill with chicken, lettuce, tomatoes, cheese, and fresh lime."
+    },
+    {
+      "id": 1005,
+      "title": "Creamy Potato Soup",
+      "image": "https://placehold.co/600x400?text=Potato+Soup",
+      "readyInMinutes": 50,
+      "preparationMinutes": 15,
+      "cookingMinutes": 35,
+      "servings": 6,
+      "extendedIngredients": [
+        { "name": "russet potatoes" },
+        { "name": "yellow onion" },
+        { "name": "garlic" },
+        { "name": "chicken broth" },
+        { "name": "heavy cream" },
+        { "name": "cheddar cheese" },
+        { "name": "green onions" }
+      ],
+      "instructions": "Cook the onion and garlic until softened. Add the potatoes and broth and simmer until the potatoes are tender. Partially blend the soup, then stir in the cream and cheddar cheese. Top with green onions."
+    },
+    {
+      "id": 1006,
+      "title": "Lemon Herb Salmon",
+      "image": "https://placehold.co/600x400?text=Lemon+Salmon",
+      "readyInMinutes": 30,
+      "preparationMinutes": 10,
+      "cookingMinutes": 20,
+      "servings": 4,
+      "extendedIngredients": [
+        { "name": "salmon fillets" },
+        { "name": "lemon" },
+        { "name": "olive oil" },
+        { "name": "garlic" },
+        { "name": "fresh dill" },
+        { "name": "salt" },
+        { "name": "black pepper" }
+      ],
+      "instructions": "Place the salmon on a baking sheet. Brush with olive oil and season with garlic, dill, salt, and pepper. Top with lemon slices and bake until the salmon flakes easily with a fork."
+    },
+    {
+      "id": 1007,
+      "title": "Vegetarian Burrito Bowl",
+      "image": "https://placehold.co/600x400?text=Burrito+Bowl",
+      "readyInMinutes": 30,
+      "preparationMinutes": 15,
+      "cookingMinutes": 15,
+      "servings": 4,
+      "extendedIngredients": [
+        { "name": "brown rice" },
+        { "name": "black beans" },
+        { "name": "corn" },
+        { "name": "avocado" },
+        { "name": "tomatoes" },
+        { "name": "lime" },
+        { "name": "cilantro" }
+      ],
+      "instructions": "Cook the rice and warm the black beans and corn. Divide the rice between bowls and top with beans, corn, avocado, and tomatoes. Finish with lime juice and cilantro."
+    },
+    {
+      "id": 1008,
+      "title": "Chicken and Broccoli Stir Fry",
+      "image": "https://placehold.co/600x400?text=Chicken+Stir+Fry",
+      "readyInMinutes": 25,
+      "preparationMinutes": 10,
+      "cookingMinutes": 15,
+      "servings": 4,
+      "extendedIngredients": [
+        { "name": "chicken breast" },
+        { "name": "broccoli" },
+        { "name": "soy sauce" },
+        { "name": "sesame oil" },
+        { "name": "garlic" },
+        { "name": "ginger" },
+        { "name": "rice" }
+      ],
+      "instructions": "Cook the chicken in a hot skillet until browned. Add the broccoli, garlic, and ginger. Stir in soy sauce and sesame oil and cook until the broccoli is tender-crisp. Serve over rice."
+    },
+    {
+      "id": 1009,
+      "title": "Tomato Basil Grilled Cheese",
+      "image": "https://placehold.co/600x400?text=Grilled+Cheese",
+      "readyInMinutes": 15,
+      "preparationMinutes": 5,
+      "cookingMinutes": 10,
+      "servings": 2,
+      "extendedIngredients": [
+        { "name": "sourdough bread" },
+        { "name": "cheddar cheese" },
+        { "name": "mozzarella cheese" },
+        { "name": "tomato" },
+        { "name": "fresh basil" },
+        { "name": "butter" }
+      ],
+      "instructions": "Butter the outside of each bread slice. Layer cheese, tomato, and basil between the slices. Cook in a skillet over medium-low heat until golden brown on both sides and the cheese has melted."
+    },
+    {
+      "id": 1010,
+      "title": "Creamy Garlic Mushroom Risotto",
+      "image": "https://placehold.co/600x400?text=Mushroom+Risotto",
+      "readyInMinutes": 45,
+      "preparationMinutes": 10,
+      "cookingMinutes": 35,
+      "servings": 4,
+      "extendedIngredients": [
+        { "name": "arborio rice" },
+        { "name": "mushrooms" },
+        { "name": "garlic" },
+        { "name": "vegetable broth" },
+        { "name": "parmesan cheese" },
+        { "name": "butter" },
+        { "name": "yellow onion" }
+      ],
+      "instructions": "Cook the onion, garlic, and mushrooms in butter until softened. Add the rice and toast briefly. Gradually add warm broth while stirring until the rice becomes creamy and tender. Stir in parmesan before serving."
+    }
+  ]
+}
