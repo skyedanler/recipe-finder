@@ -1,26 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="recipe finder">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="styles.css">
-        <script src="app.js" defer></script>
-        <title>Foodie Fest</title>
-    </head>
-    <body>
-        <header>Foodie Fest</header>
-        <section id="search-section">
-            <h1>Search By:</h1>
-            <div id="search-options">
-                <div class="search-option-btn ingredient-search active">Ingredient
-                </div>
-                <div class="search-option-btn cuisine-search">Cuisine
-                </div>
-                <div class="search-option-btn dietary-search">Dietary
-                </div>
-            </div>
-        </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="recipe finder" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <title>Foodie Fest</title>
+  </head>
+  <body>
+    <header>Foodie Fest</header>
+    <section id="search-container">
+      <h1>Search By:</h1>
+      <div id="search-options">
+        <div class="search-option-btn active" data-search="ingredient">
+          Ingredient
+        </div>
+        <div class="search-option-btn" data-search="cuisine">Cuisine</div>
+        <div class="search-option-btn" data-search="dietary">Dietary</div>
+      </div>
+      <div class="input-areas">
+        <div class="ingredient-search search-option" data-search="ingredient">
+          <input type="text" id="ingredient" name="ingredient" />
+          <div class="search-btn">Search</div>
+        </div>
+        <div class="cuisine-choices search-option hidden" data-search="cuisine">
+          <div class="cuisine-option">Italian</div>
+          <div class="cuisine-option">Mexican</div>
+          <div class="cuisine-option">Chinese</div>
+          <div class="cuisine-option">Southern Comfort</div>
+          <div class="cuisine-option">Indian</div>
+        </div>
+        <div class="dietary-choices search-option hidden" data-search="dietary">
+          <div class="dietary-option">Vegan</div>
+          <div class="dietary-option">Vegatarian</div>
+          <div class="dietary-option">Gluten-Free</div>
+          <div class="dietary-option">Lactose Intolerant</div>
+          <div class="dietary-option">Nut Allergy</div>
+        </div>
+      </div>
+    </section>
 
-    </body>
+    <section id="recipe-results"></section>
+    <section id="favorites"></section>
+    <div id="modal-popup"></div>
+  </body>
 </html>
