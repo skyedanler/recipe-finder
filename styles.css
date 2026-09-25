@@ -1,6 +1,6 @@
 :root {
-    --primary-color: lightblue;
-    --secondary-color: rgb(72, 62, 54);
+  --primary-color: lightblue;
+  --secondary-color: rgb(72, 62, 54);
 }
 
 body {
@@ -11,7 +11,7 @@ body {
   align-items: center;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-} 
+}
 header {
   background-color: var(--secondary-color);
   color: ivory;
@@ -25,46 +25,48 @@ header {
 /*search section*/
 /*search by choices*/
 #search-container {
-
 }
 #search-options {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
-.search-option-btn, .cuisine-option, .dietary-option, .search-btn {
-    min-width:fit-content;
-    border-radius: 8px;
-    background-color: rgb(252, 252, 145);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 8px;
+.search-option-btn,
+.cuisine-option,
+.dietary-option,
+.search-btn {
+  min-width: fit-content;
+  border-radius: 8px;
+  background-color: rgb(252, 252, 145);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 8px;
 }
 .search-option-btn {
-    width: 15%;
-    opacity: .5;
+  width: 15%;
+  opacity: 0.5;
 }
-.search-option-btn:hover, .search-btn:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 6px gray;
+.search-option-btn:hover,
+.search-btn:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 6px gray;
 }
 .active {
-    opacity: 1 !important;
+  opacity: 1 !important;
 }
 
 /*search by sections*/
 .input-areas {
-    border-radius: 8px;
-    padding: 16px;
-    border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 16px;
+  border: 2px solid var(--secondary-color);
 }
 .search-option {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 .hidden {
-    display: none;
+  display: none;
 }
-
 
 /*recipe cards*/
 #recipe-results {
@@ -73,6 +75,8 @@ header {
 .recipes {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
 }
 .recipe-card {
   min-width: 25%;
@@ -80,11 +84,11 @@ header {
   margin: 8px;
   display: grid;
   grid-template-areas:
-  ". title title title ."
-  "img img img img img"
-  "time . . servings servings";
+    ". title title title ."
+    "img img img img img"
+    "time . . servings servings";
   grid-template-columns: repeat(5, 1fr);
-  background-color: ivory;
+  background-color: snow;
   border-radius: 4px;
   box-shadow:
     inset 0px 4px 10px gray,
@@ -112,18 +116,25 @@ header {
 /*modal popup*/
 #modal-popup {
   border-radius: 8px;
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 500px;
   background-color: ivory;
   display: grid;
   grid-template-areas:
-  "fave title title title close"
-  ". img img img ."
-  ". prep-time cook-time total-time ."
-  "ingredients . . instructions instructions";
-  grid-columns: repeat(5, 1fr);
+    "fave title title title close"
+    ". img img img ."
+    ". prep-time cook-time total-time ."
+    "ingredients . . instructions instructions";
+  grid-template-columns: repeat(5, 1fr);
 }
-.favorite-btn, .close-btn {
+#modal-popup.hidden {
+  display: none;
+}
+.favorite-btn,
+.close-btn {
   background: none;
   border: none;
 }
@@ -141,4 +152,7 @@ header {
 }
 .ingredients {
   grid-area: ingredients;
+}
+.instructions {
+  grid-area: instructions;
 }

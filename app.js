@@ -17,12 +17,21 @@ const dietaryOptions = document.querySelectorAll(".dietary-option");
 //modal
 const modalPopup = document.querySelector("#modal-popup");
 
+//favorites
+let favorites = [];
+const favoriteRecipes = document.querySelector(".favorite-recipes");
+
 //search by ingredient using api
 const apiKey = "MY_API_KEY";
 const spoonacular = "https://api.spoonacular.com/recipes/";
 const addRecipeInfo = "&addRecipeInformation=true";
 
 const useFakeData = true;
+
+document.addEventListener("DOMContentLoaded", () => {
+  favorites = retrieveFavorites();
+  displayFavorites();
+});
 
 searchOptionBtns.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -46,7 +55,7 @@ searchBtn.addEventListener("click", async () => {
   recipeResults.innerHTML = "";
   const data = await getRecipes("ingredient", ingredientInput.value);
   console.log("my data", data);
-  createRecipeCards(data);
+  createRecipeCards(data, recipeResults);
 });
 
 //search by cuisine choice
@@ -55,7 +64,7 @@ cuisineOptions.forEach((button) => {
     recipeResults.innerHTML = "";
     const cuisine = event.target.dataset.search;
     const data = await getRecipes("cuisine", cuisine);
-    createRecipeCards(data);
+    createRecipeCards(data, recipeResults);
   });
 });
 
@@ -65,7 +74,7 @@ dietaryOptions.forEach((button) => {
     recipeResults.innerHTML = "";
     const dietary = event.target.dataset.search;
     const data = await getRecipes("dietary", dietary);
-    createRecipeCards(data);
+    createRecipeCards(data, recipeResults);
   });
 });
 
@@ -99,7 +108,7 @@ async function getRecipes(searchType, searchValue) {
   }
 }
 
-function createRecipeCards(data) {
+function createRecipeCards(data, destination) {
   const ul = document.createElement("ul");
   ul.className = "recipes";
 
@@ -113,13 +122,20 @@ function createRecipeCards(data) {
     <p class="recipe-time">${recipe.readyInMinutes} min.</p>
     <p class="recipe-servings">Servings: ${recipe.servings}</p>
     `;
-    li.addEventListener("click", () => {
-      getRecipeInfo(li.dataset.id);
-    });
+
+    if (destination === favoriteRecipes) {
+      li.addEventListener("click", () => {
+        createRecipeModal(recipe);
+      });
+    } else {
+      li.addEventListener("click", () => {
+        getRecipeInfo(recipe.id);
+      });
+    }
 
     ul.append(li);
   });
-  recipeResults.append(ul);
+  destination.append(ul);
 }
 
 //fetch the data for the particular recipe clicked on
@@ -152,9 +168,11 @@ function createRecipeModal(recipe) {
     ingredientList.append(ingredientItem);
   });
 
+  const isFavorite = favorites.some((favorite) => favorite.id === recipe.id);
+
   modalPopup.innerHTML = `
     <button class="favorite-btn">
-      <i class="fa-regular fa-heart"></i>
+      <i class="${isFavorite ? "fa-solid" : "fa-regular"} fa-heart"></i>
     </button>
     <h2 class="recipe-title">${recipe.title}</h2>
     <button class="close-btn">
@@ -167,8 +185,11 @@ function createRecipeModal(recipe) {
   `;
 
   modalPopup.append(ingredientList);
+  const instructions = document.createElement("div");
+  instructions.className = "instructions";
+  instructions.innerHTML = recipe.instructions;
 
-  modalPopup.append(recipe.instructions);
+  modalPopup.append(instructions);
 
   const closeBtn = document.querySelector(".close-btn");
   const favoriteBtn = document.querySelector(".favorite-btn");
@@ -180,8 +201,51 @@ function createRecipeModal(recipe) {
 
   //implements ability to add recipe to favorites
   favoriteBtn.addEventListener("click", () => {
-    //add to favorites localStorage
+    updateFavorite(recipe);
   });
 
   modalPopup.classList.remove("hidden");
+}
+
+//update list of favorite recipes but clicking heart icon
+function updateFavorite(recipe) {
+  const recipeCard = document.querySelector(`[data-id="${recipe.id}"]`);
+
+  const favoriteBtn = modalPopup.querySelector(".favorite-btn");
+  const heartIcon = favoriteBtn.querySelector("i");
+  const isFavorite = favorites.some((favorite) => favorite.id === recipe.id);
+
+  if (isFavorite) {
+    heartIcon.classList.remove("fa-solid");
+    heartIcon.classList.add("fa-regular");
+    recipeCard.classList.remove("favorite");
+
+    favorites = favorites.filter((favorite) => favorite.id !== recipe.id);
+  } else {
+    heartIcon.classList.remove("fa-regular");
+    heartIcon.classList.add("fa-solid");
+    recipeCard.classList.add("favorite");
+
+    favorites.push(recipe);
+  }
+
+  saveFavesLocally();
+  displayFavorites();
+}
+
+function displayFavorites() {
+  favoriteRecipes.innerHTML = "";
+  if (favorites === []) {
+    return;
+  } else {
+    createRecipeCards(favorites, favoriteRecipes);
+  }
+}
+
+function saveFavesLocally() {
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+function retrieveFavorites() {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
 }
