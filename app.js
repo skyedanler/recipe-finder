@@ -99,12 +99,17 @@ async function getRecipes(searchType, searchValue) {
     } else {
       const response = await fetch(url);
       const data = await response.json();
+      if (!data.results.length) {
+        alert("No recipes found. Try searching for something else.");
+      }
+
       return data.results;
     }
     console.log(data);
     return data.results;
   } catch (error) {
     console.log("Error fetching recipes:", error);
+    alert("There was an issue loading the data, thank you for your patience.");
   }
 }
 
@@ -160,7 +165,29 @@ async function getRecipeInfo(recipe_id) {
 //create the modal popup for the clicked on recipe
 function createRecipeModal(recipe) {
   const ingredientList = document.createElement("ul");
-  ingredientList.className = "ingredients";
+  const ingredientDiv = document.createElement("div");
+  ingredientDiv.className = "ingredients";
+
+  //search recipe object for nutritional info
+  const chosenNutrients = ["Calories", "Protein", "Carbohydrates", "Fat"];
+  const nutrients = recipe.nutrition.nutrients.filter((nutrient) =>
+    chosenNutrients.includes(nutrient.name),
+  );
+  const nutritionDiv = document.createElement("div");
+  nutritionDiv.className = "nutrition";
+
+  nutrients.forEach((nutrient) => {
+    const nutrientType = document.createElement("p");
+    const nutrientAmount = document.createElement("p");
+
+    nutrientType.className = "nutrient-type";
+    nutrientAmount.className = "nutrient-amount";
+
+    nutrientType.textContent = nutrient.name;
+    nutrientAmount.textContent = `${nutrient.amount} ${nutrient.unit}`;
+
+    nutritionDiv.append(nutrientType, nutrientAmount);
+  });
 
   recipe.extendedIngredients.forEach((ingredient) => {
     const ingredientItem = document.createElement("li");
@@ -178,18 +205,27 @@ function createRecipeModal(recipe) {
     <button class="close-btn">
       <i class="fa-solid fa-x close"></i>
     </button>
+    <p class="servings">Servings: ${recipe.servings}</p>
     <img class="recipe-img" src="${recipe.image}" alt="${recipe.title}"/>
     <p class="prep-time">Prep Time: ${recipe.preparationMinutes}</p>
     <p class="cook-time">Cook Time: ${recipe.cookingMinutes}</p>
     <p class="total-time">Total Time: ${recipe.readyInMinutes}</p>
   `;
 
-  modalPopup.append(ingredientList);
-  const instructions = document.createElement("div");
-  instructions.className = "instructions";
-  instructions.innerHTML = recipe.instructions;
+  ingredientDiv.innerHTML = `<h3>Ingredients</h3>`;
+  ingredientDiv.append(ingredientList);
+  modalPopup.append(ingredientDiv);
 
-  modalPopup.append(instructions);
+  const instructionsDiv = document.createElement("div");
+  const instructionsHTML = document.createElement("div");
+  instructionsDiv.className = "instructions";
+  instructionsDiv.innerHTML = `<h3>Instructions</h3>`;
+  instructionsHTML.innerHTML = recipe.instructions;
+
+  instructionsDiv.append(instructionsHTML);
+
+  modalPopup.append(instructionsDiv);
+  modalPopup.append(nutritionDiv);
 
   const closeBtn = document.querySelector(".close-btn");
   const favoriteBtn = document.querySelector(".favorite-btn");

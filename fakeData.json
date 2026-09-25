@@ -17,7 +17,31 @@
         { "name": "parmesan cheese" },
         { "name": "fresh basil" }
       ],
-      "instructions": "Cook the pasta according to the package directions. Cook the chicken in a skillet until browned and cooked through. Add garlic and tomatoes and simmer until softened. Stir in the cream and parmesan. Add the pasta and chicken and toss until coated. Garnish with fresh basil."
+      "instructions": "Cook the pasta according to the package directions. Cook the chicken in a skillet until browned and cooked through. Add garlic and tomatoes and simmer until softened. Stir in the cream and parmesan. Add the pasta and chicken and toss until coated. Garnish with fresh basil.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1002,
@@ -36,7 +60,31 @@
         { "name": "salt" },
         { "name": "black pepper" }
       ],
-      "instructions": "Melt the butter in a large skillet. Add the garlic and cook briefly until fragrant. Add the shrimp and cook until pink and opaque. Finish with lemon juice, parsley, salt, and pepper."
+      "instructions": "Melt the butter in a large skillet. Add the garlic and cook briefly until fragrant. Add the shrimp and cook until pink and opaque. Finish with lemon juice, parsley, salt, and pepper.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1003,
@@ -55,7 +103,31 @@
         { "name": "olive oil" },
         { "name": "parmesan cheese" }
       ],
-      "instructions": "Roast the vegetables with olive oil until tender and lightly browned. Cook the pasta until al dente. Toss the pasta with the roasted vegetables and parmesan cheese."
+      "instructions": "Roast the vegetables with olive oil until tender and lightly browned. Cook the pasta until al dente. Toss the pasta with the roasted vegetables and parmesan cheese.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1004,
@@ -74,7 +146,31 @@
         { "name": "lime" },
         { "name": "taco seasoning" }
       ],
-      "instructions": "Season and cook the chicken until browned and cooked through. Slice the chicken into small pieces. Warm the tortillas and fill with chicken, lettuce, tomatoes, cheese, and fresh lime."
+      "instructions": "Season and cook the chicken until browned and cooked through. Slice the chicken into small pieces. Warm the tortillas and fill with chicken, lettuce, tomatoes, cheese, and fresh lime.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1005,
@@ -93,7 +189,31 @@
         { "name": "cheddar cheese" },
         { "name": "green onions" }
       ],
-      "instructions": "Cook the onion and garlic until softened. Add the potatoes and broth and simmer until the potatoes are tender. Partially blend the soup, then stir in the cream and cheddar cheese. Top with green onions."
+      "instructions": "Cook the onion and garlic until softened. Add the potatoes and broth and simmer until the potatoes are tender. Partially blend the soup, then stir in the cream and cheddar cheese. Top with green onions.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1006,
@@ -112,7 +232,31 @@
         { "name": "salt" },
         { "name": "black pepper" }
       ],
-      "instructions": "Place the salmon on a baking sheet. Brush with olive oil and season with garlic, dill, salt, and pepper. Top with lemon slices and bake until the salmon flakes easily with a fork."
+      "instructions": "Place the salmon on a baking sheet. Brush with olive oil and season with garlic, dill, salt, and pepper. Top with lemon slices and bake until the salmon flakes easily with a fork.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1007,
@@ -131,7 +275,31 @@
         { "name": "lime" },
         { "name": "cilantro" }
       ],
-      "instructions": "Cook the rice and warm the black beans and corn. Divide the rice between bowls and top with beans, corn, avocado, and tomatoes. Finish with lime juice and cilantro."
+      "instructions": "Cook the rice and warm the black beans and corn. Divide the rice between bowls and top with beans, corn, avocado, and tomatoes. Finish with lime juice and cilantro.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1008,
@@ -150,7 +318,31 @@
         { "name": "ginger" },
         { "name": "rice" }
       ],
-      "instructions": "Cook the chicken in a hot skillet until browned. Add the broccoli, garlic, and ginger. Stir in soy sauce and sesame oil and cook until the broccoli is tender-crisp. Serve over rice."
+      "instructions": "Cook the chicken in a hot skillet until browned. Add the broccoli, garlic, and ginger. Stir in soy sauce and sesame oil and cook until the broccoli is tender-crisp. Serve over rice.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1009,
@@ -168,7 +360,31 @@
         { "name": "fresh basil" },
         { "name": "butter" }
       ],
-      "instructions": "Butter the outside of each bread slice. Layer cheese, tomato, and basil between the slices. Cook in a skillet over medium-low heat until golden brown on both sides and the cheese has melted."
+      "instructions": "Butter the outside of each bread slice. Layer cheese, tomato, and basil between the slices. Cook in a skillet over medium-low heat until golden brown on both sides and the cheese has melted.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     },
     {
       "id": 1010,
@@ -187,7 +403,31 @@
         { "name": "butter" },
         { "name": "yellow onion" }
       ],
-      "instructions": "Cook the onion, garlic, and mushrooms in butter until softened. Add the rice and toast briefly. Gradually add warm broth while stirring until the rice becomes creamy and tender. Stir in parmesan before serving."
+      "instructions": "Cook the onion, garlic, and mushrooms in butter until softened. Add the rice and toast briefly. Gradually add warm broth while stirring until the rice becomes creamy and tender. Stir in parmesan before serving.",
+      "nutrition": {
+        "nutrients": [
+          {
+            "name": "Calories",
+            "amount": 400,
+            "unit": "kcal"
+          },
+          {
+            "name": "Protein",
+            "amount": 28,
+            "unit": "g"
+          },
+          {
+            "name": "Carbohydrates",
+            "amount": 42,
+            "unit": "g"
+          },
+          {
+            "name": "Fat",
+            "amount": 12,
+            "unit": "g"
+          }
+        ]
+      }
     }
   ]
 }

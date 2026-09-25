@@ -1,6 +1,6 @@
 :root {
-  --primary-color: lightblue;
-  --secondary-color: rgb(72, 62, 54);
+    --primary-color: lightblue;
+    --secondary-color: rgb(72, 62, 54);
 }
 
 body {
@@ -11,7 +11,7 @@ body {
   align-items: center;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-}
+} 
 header {
   background-color: var(--secondary-color);
   color: ivory;
@@ -23,53 +23,61 @@ header {
 }
 
 /*search section*/
+input {
+  width: 70%;
+}
 /*search by choices*/
-#search-container {
+#search-container, #favorites {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #search-options {
-  display: flex;
-  gap: 10px;
+    display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
-.search-option-btn,
-.cuisine-option,
-.dietary-option,
-.search-btn {
-  min-width: fit-content;
-  border-radius: 8px;
-  background-color: rgb(252, 252, 145);
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 8px;
+.search-option-btn, .cuisine-option, .dietary-option, .search-btn {
+    min-width:fit-content;
+    border-radius: 8px;
+    background-color: rgb(252, 252, 145);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 8px;
 }
 .search-option-btn {
-  width: 15%;
-  opacity: 0.5;
+    opacity: .5;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
 }
-.search-option-btn:hover,
-.search-btn:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 6px gray;
+.search-option-btn:hover, .search-btn:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 6px gray;
 }
 .active {
-  opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 /*search by sections*/
 .input-areas {
-  border-radius: 8px;
-  padding: 16px;
-  border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 16px;
+    border: 2px solid var(--secondary-color);
+  width: 50%;
 }
 .search-option {
-  display: flex;
-  gap: 8px;
+    display: flex;
+  justify-content: space-evenly;
 }
 .hidden {
-  display: none;
+    display: none;
 }
 
+
 /*recipe cards*/
-#recipe-results {
+#recipe-results, #favorites {
   width: 80%;
 }
 .recipes {
@@ -79,25 +87,25 @@ header {
   padding: 0;
 }
 .recipe-card {
-  min-width: 25%;
-  max-width: 30%;
+  width: 30%;
   margin: 8px;
   display: grid;
   grid-template-areas:
-    ". title title title ."
-    "img img img img img"
-    "time . . servings servings";
+  "title title title title title"
+  "img img img img img"
+  "time . . servings servings";
   grid-template-columns: repeat(5, 1fr);
   background-color: snow;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow:
-    inset 0px 4px 10px gray,
-    inset 0px -2px 15px gray,
+    inset 0px 4px 10px gainsboro,
+    inset 0px -2px 15px gainsboro,
     0px 4px 10px gray;
   padding: 8px;
 }
 .recipe-title {
   grid-area: title;
+  justify-self: center;
 }
 .recipe-img {
   grid-area: img;
@@ -111,32 +119,44 @@ header {
   grid-area: servings;
 }
 
-/*favorites*/
 
+/*favorites*/
+.favorite-recipes {
+  width: 100%;
+}
 /*modal popup*/
 #modal-popup {
+  overflow-y: scroll;
   border-radius: 8px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
-  background-color: ivory;
+  height: 80vh;
+  background-color: snow;
   display: grid;
   grid-template-areas:
-    "fave title title title close"
-    ". img img img ."
-    ". prep-time cook-time total-time ."
-    "ingredients . . instructions instructions";
+  "fave title title title close"
+    ". servings servings servings ."
+  "img img img img img"
+  ". prep-time cook-time total-time ."
+  "ingredients ingredients instructions instructions instructions"
+  ". nutrition nutrition nutrition .";
   grid-template-columns: repeat(5, 1fr);
+  padding: 16px;
+  box-shadow:
+    inset 0px 2px 6px gainsboro,
+    inset 0px -3px 7px gainsboro,
+    0px 16px 30px gray;
 }
 #modal-popup.hidden {
   display: none;
 }
-.favorite-btn,
-.close-btn {
+.favorite-btn, .close-btn {
   background: none;
   border: none;
+  font-size: 1.25rem;
 }
 .favorite-btn {
   grid-area: fave;
@@ -150,9 +170,140 @@ header {
 .total-time {
   grid-area: total-time;
 }
+.servings {
+  grid-area: servings;
+  margin: 8px;
+  justify-self: center;
+}
+.servings::before, .recipe-servings::before {
+  content: "\e4c6";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  padding-right: 4px;
+}
+.prep-time::before, .cook-time::before, .total-time::before, .recipe-time::before {
+  content: "\f017";
+  font-family: "Font Awesome 6 Free";
+  padding-right: 4px;
+}
 .ingredients {
   grid-area: ingredients;
 }
 .instructions {
   grid-area: instructions;
+}
+.nutrition {
+  grid-area: nutrition;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-self: center;
+  border: 1px solid var(--secondary-color);
+  padding: 4px;
+  margin-top: 8px;
+}
+.nutrient-type {
+  text-align: left;
+}
+.nutrient-amount {
+  text-align: right;
+}
+.nutrient-type, .nutrient-amount {
+  margin: 0;
+}
+
+
+
+/*responsive design*/
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    font-size: 3rem;
+  }
+  
+  /*search-section*/
+  .search-option-btn {
+    font-size: 1.6rem;
+  }
+  .input-areas {
+    width: 80%;
+  }
+  .cuisine-choices, .dietary-choices {
+    flex-wrap: wrap;
+  }
+  .cuisine-option, .dietary-option, .search-btn {
+    font-size: 1.5rem;
+  }
+
+  /*recipe-cards*/
+  #recipe-results, #favorites {
+    width: 100%;
+  }
+  .recipe-card {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .recipe-card p {
+    font-size: 1.25rem;
+  }
+
+  /*modal*/
+  #modal-popup {
+    overflow-y: scroll;
+    width: 75%;
+    height: 75vh;
+    grid-template-areas:
+  "fave title title title close"
+    ". servings servings servings ."
+  "img img img img img"
+  ". prep-time cook-time total-time ."
+  "ingredients ingredients instructions instructions instructions"
+  ". nutrition nutrition nutrition .";
+  grid-template-columns: repeat(5, 1fr);
+    font-size: 1.25rem;
+  }
+}
+/*mobile*/
+@media (min-width: 350px) and (max-width: 767px) {
+  header {
+    font-size: 3rem;
+  }
+  
+  /*search-section*/
+  .search-option-btn {
+    font-size: 1.6rem;
+  }
+  .input-areas {
+    width: 80%;
+  }
+  .cuisine-choices, .dietary-choices {
+    flex-wrap: wrap;
+  }
+  .cuisine-option, .dietary-option, .search-btn {
+    font-size: 1.5rem;
+  }
+
+  /*recipe-cards*/
+  .recipe-card {
+    width: 80%;
+  }
+  .recipe-card p {
+    font-size: 1.25rem;
+  }
+
+  /*modal*/
+  #modal-popup {
+    width: 75%;
+    grid-template-areas:
+  "fave title close"
+    "servings servings servings"
+  "img img img"
+  "prep-time cook-time total-time"
+  "ingredients ingredients ingredients"
+  "instructions instructions instructions"
+  "nutrition nutrition nutrition";
+  grid-template-columns: repeat(3, 1fr);
+    font-size: 1.25rem;
+  }
 }
